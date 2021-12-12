@@ -5,12 +5,14 @@ filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 
+
 def count(c, patterns):
     count = 0
     for p in patterns:
         if c in p:
             count += 1
     return count
+
 
 with open(filename) as f:
     lines = f.readlines()
@@ -51,7 +53,7 @@ with open(filename) as f:
             "abdefg": "6",
             "acf": "7",
             "abcdefg": "8",
-            "abcdfg": "9"
+            "abcdfg": "9",
         }
 
         n = []

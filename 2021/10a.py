@@ -5,19 +5,9 @@ filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 
-points = {
-    ")": 3,
-    "]": 57,
-    "}": 1197,
-    ">": 25137
-}
+points = {")": 3, "]": 57, "}": 1197, ">": 25137}
 
-brackets = {
-    ")": "(",
-    "]": "[",
-    "}": "{",
-    ">": "<"
-}
+brackets = {")": "(", "]": "[", "}": "{", ">": "<"}
 
 with open(filename) as f:
     lines = f.readlines()

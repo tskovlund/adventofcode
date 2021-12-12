@@ -14,10 +14,10 @@ with open(filename) as f:
             gamma[i] += int(bit)
     for i, bit in enumerate(gamma):
         if gamma[i] > len(numbers) / 2:
-            gamma[i] = 2**(len(gamma) - i - 1)
+            gamma[i] = 2 ** (len(gamma) - i - 1)
             epsilon[i] = 0
         else:
-            epsilon[i] = 2**(len(gamma) - i - 1)
+            epsilon[i] = 2 ** (len(gamma) - i - 1)
             gamma[i] = 0
     gamma = sum(gamma)
     epsilon = sum(epsilon)

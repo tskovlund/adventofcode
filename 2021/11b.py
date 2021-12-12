@@ -1,8 +1,10 @@
 import sys
 import os
+
 filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
+
 
 def increment(row, col, octo, flashed):
     if (row, col) in flashed:
@@ -45,4 +47,4 @@ with open(filename) as f:
         for i, row in enumerate(octo):
             for j, col in enumerate(row):
                 count += increment(i, j, octo, flashed)
-    print(step)   
+    print(step)

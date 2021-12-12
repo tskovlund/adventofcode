@@ -5,6 +5,7 @@ filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 
+
 def count_basin(i, j, m, visited=set()):
     rows = len(m)
     cols = len(m[0])
@@ -31,6 +32,7 @@ def count_basin(i, j, m, visited=set()):
                 count += count_basin(i, j + 1, m)
                 visited.add((i, j + 1))
     return count
+
 
 with open(filename) as f:
     lines = f.readlines()
@@ -69,4 +71,3 @@ with open(filename) as f:
             else:
                 max_3 = basin_size
     print(max_1 * max_2 * max_3)
-

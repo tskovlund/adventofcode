@@ -6,19 +6,9 @@ filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 
-points = {
-    ")": 1,
-    "]": 2,
-    "}": 3,
-    ">": 4
-}
+points = {")": 1, "]": 2, "}": 3, ">": 4}
 
-brackets = {
-    ")": "(",
-    "]": "[",
-    "}": "{",
-    ">": "<"
-}
+brackets = {")": "(", "]": "[", "}": "{", ">": "<"}
 
 _brackets = {
     "(": ")",

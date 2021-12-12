@@ -34,7 +34,7 @@ with open(filename) as f:
 
     intersections = []
     for i in range(min_y, max_y + 1):
-        intersections.append([0]*(max_x - min_x + 1))
+        intersections.append([0] * (max_x - min_x + 1))
 
     count = 0
 
