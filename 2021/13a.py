@@ -11,7 +11,7 @@ with open(filename) as f:
     points = set()
     line = f.readline()
     while "," in line:
-        x,y = line.strip("\n").split(",")
+        x, y = line.strip("\n").split(",")
         points.add((int(x), int(y)))
         line = f.readline()
     folds = f.readlines()

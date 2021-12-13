@@ -10,7 +10,7 @@ with open(filename) as f:
     points = set()
     line = f.readline()
     while "," in line:
-        x,y = line.strip("\n").split(",")
+        x, y = line.strip("\n").split(",")
         points.add((int(x), int(y)))
         line = f.readline()
     folds = f.readlines()
@@ -32,7 +32,7 @@ with open(filename) as f:
     max_y = max(points, key=lambda p: p[1])[1]
     _points = []
     for i in range(max_y + 1):
-        _points.append(["."]*(max_x + 1))
+        _points.append(["."] * (max_x + 1))
     for (x, y) in points:
         _points[y][x] = "#"
     for line in _points:
