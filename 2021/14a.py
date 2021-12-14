@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import os
 from collections import Counter, defaultdict
@@ -12,7 +14,7 @@ with open(filename) as f:
     template = f.readline().strip("\n")
     pair_count = Counter()
     for i in range(len(template) - 1):
-        pair_count[template[i:i + 2]] += 1
+        pair_count[template[i : i + 2]] += 1
 
     f.readline()
     rules = defaultdict(lambda: None)
@@ -28,7 +30,7 @@ with open(filename) as f:
                 pair_count[rule + pair[1]] += count
                 pair_count[pair] -= count
     print(pair_count)
-    
+
     character_count = Counter()
     for pair, count in pair_count.items():
         character_count[pair[0]] += count

@@ -1,6 +1,7 @@
+#!/usr/bin/env python3
+
 import sys
 import os
-
 
 filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:

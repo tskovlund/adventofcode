@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import os
 
@@ -12,7 +14,7 @@ def print_score(plate, n):
         for number, flag in line:
             if not flag:
                 score += int(number)
-    score *= int(n)
+    score *= int(n
     print(score)
 
 
