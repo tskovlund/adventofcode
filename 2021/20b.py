@@ -8,7 +8,7 @@ filename = os.path.basename(__file__).split(".")[0][:-1] + ".txt"
 if len(sys.argv) > 1:
     filename = sys.argv[1]
 
-N = 2
+N = 50
 
 def get_pixel(i, j, image, rows, cols, inf):
     if i < 0 or i >= rows or j < 0 or j >= cols:
