@@ -8,7 +8,7 @@ opponent = {
 
 score = 0
 for r in readfile():
-    o, y = r[:-1].split(" ")
+    o, y = r.split(" ")
     if y == "X": # lose
         score += opponent[o] - 1
         if o == "A":

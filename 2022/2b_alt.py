@@ -9,7 +9,7 @@ opponent = {
 
 score = 0
 for r in readfile():
-    o, y = r[:-1].split(" ")
+    o, y = r.split(" ")
     if y == "X": # lose
         score += scores[(opponent[o] - 1) % 3]
     if y == "Y": # draw

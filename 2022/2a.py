@@ -13,7 +13,7 @@ you = {
 
 score = 0
 for r in readfile():
-    o, y = r[:-1].split(" ")
+    o, y = r.split(" ")
     score += you[y]
     if opponent[o] == you[y]:
         score += 3
