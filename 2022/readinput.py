@@ -15,4 +15,8 @@ def readfile_with_newlines():
 
 def readfile():
     with open_file() as f:
-        return [line.rstrip("\n") for line in open_file()]
+        return [line.rstrip("\n") for line in f]
+
+
+def readfile_and_split(s=" "):
+    return [line.split(s) for line in readfile()]
