@@ -20,3 +20,7 @@ def readfile():
 
 def readfile_and_split(s=" "):
     return [line.split(s) for line in readfile()]
+
+
+def readgrid():
+    return [list(map(int, line)) for line in readfile()]
