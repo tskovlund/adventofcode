@@ -25,10 +25,10 @@ def merge_ranges(ranges, r_):
 
 def add_ranges(ranges, s, d):
     sx, sy = s
-    for y in range(max(0, sy - d), min(MAX + 1, sy + d + 1)):
+    for y in range(max(0, sy - d), min(MAX, sy + d) + 1):
         a = abs(sy - y)
         b = d - a
-        r = [max(0, sx - b), min(MAX + 1, sx + b)]
+        r = [max(0, sx - b), min(MAX, sx + b)]
         ranges[y] = merge_ranges(ranges[y], r)
 
 
